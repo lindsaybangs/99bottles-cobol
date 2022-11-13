@@ -1,0 +1,25 @@
+{
+  "$schema": "https://cobolget.com/schema.json",
+  "name": "package-name",
+  "description": "Short description",
+  "modules": [],
+  "dialect": "gnucobol",
+  "licenses": [
+    "MIT"
+  ],
+  "authors": [
+    "Lindsay Bangs"
+  ],
+  "dependencies": {
+    "core-network": "*",
+    "core-string": "*"
+  },
+  "dependencies-debug": {
+    "gcblunit": "*"
+  },
+  "scripts": {
+    "go": "cobolget run compile && cobolget run run",
+    "compile": "cobc -x ./src/main.cbl",
+    "run": "./main"
+  }
+}
